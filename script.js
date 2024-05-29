@@ -32,3 +32,19 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+/* Play Round */
+function playRound(humanChoice, computerChoice) {
+  if (
+    (humanChoice === "Rock" && computerChoice === "Scissors") || 
+    (humanChoice === "Paper" && computerChoice === "Rock") ||
+    (humanChoice === "Scissors" && computerChoice === "Paper")
+  ) {
+    humanScore++;
+    alert(`You win! ${humanChoice} beats ${computerChoice}`);
+  } else if (humanChoice === computerChoice) {
+    alert("It's a tie!");
+  } else {
+    computerScore++;
+    alert(`You lose! ${computerChoice} beats ${humanChoice}`);
+  }
+}
