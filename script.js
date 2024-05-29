@@ -1,3 +1,4 @@
+/* Computer Choice */
 function getComputerChoice() {
   let randomInt = Math.floor(Math.random() * 3);
   let computerChoice = "Rock";
@@ -9,6 +10,7 @@ function getComputerChoice() {
   return computerChoice;
 } 
 
+/* Human Choice */
 function getHumanChoice() {
   let rightChoice = false;
   let humanChoice;
@@ -25,3 +27,8 @@ function getHumanChoice() {
 
   return humanChoice;
 }
+
+/* Score */
+let humanScore = 0;
+let computerScore = 0;
+
