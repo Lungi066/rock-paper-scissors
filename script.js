@@ -9,3 +9,19 @@ function getComputerChoice() {
   return computerChoice;
 } 
 
+function getHumanChoice() {
+  let rightChoice = false;
+  let humanChoice;
+
+  while (!rightChoice) {
+    humanChoice = prompt("What's your choice? (Choose between Rock, Paper and Scissors. Five rounds total.)");
+    let humanChoiceUpper = humanChoice.toUpperCase();
+    if (humanChoiceUpper === "ROCK" || humanChoiceUpper === "PAPER" || humanChoiceUpper === "SCISSORS") {
+      rightChoice = true;
+    } 
+  }
+
+  humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1);
+
+  return humanChoice;
+}
